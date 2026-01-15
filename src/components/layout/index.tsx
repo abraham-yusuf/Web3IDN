@@ -25,6 +25,7 @@ export default function Layout({
 
 function Main({ page, children }: { page: PageOptsWithRoute; children: ReactNode }) {
   const router = useRouter();
+  // Use pathname for route detection since page.route is not available in Nextra 3 PageOpts
   const route = router.pathname;
   
   if (route.startsWith("/blog/tags")) return <>{children}</>;
