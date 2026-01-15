@@ -1,17 +1,16 @@
 import { AppProps } from "next/app";
 import { ReactElement } from "react";
-// Temporarily disabled Google Fonts due to network restrictions
-// import { Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { AdsProvider } from "./adsense";
 
 import Script from "next/script";
 
-// const noto = Inter({
-//   variable: "--font-noto",
-//   preload: true,
-//   subsets: ["latin"],
-// });
+const noto = Inter({
+  variable: "--font-noto",
+  preload: true,
+  subsets: ["latin"],
+});
 
 export default function App({ Component, pageProps }: AppProps): ReactElement {
   return (
@@ -19,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps): ReactElement {
       <Analytics />
       <style jsx global>{`
         html {
-          --font-noto: Inter, system-ui, -apple-system, sans-serif;
+          --font-noto: ${noto.style.fontFamily};
         }
       `}</style>
       <Script
