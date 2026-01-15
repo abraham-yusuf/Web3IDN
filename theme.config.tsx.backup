@@ -17,37 +17,11 @@ const config: Partial<DocsThemeConfig> = {
       />
     ),
   },
-  head: () => {
-    const { asPath, route } = useRouter();
-    const { frontMatter, title } = useConfig();
-
-    const image = frontMatter.image ?? "/img/web3idn.png";
-    const description =
-      frontMatter.description ??
-      "Advancing blockchain education, research, resources and development Web3 Indonesia";
-    
-    const titleTemplate = route === "/" ? title : `${title} – Web3IDN`;
-
-    return (
-      <>
-        <link rel="shortcut icon" href="/img/logo/logo.png" />
-        <meta name="description" content={description} />
-        <meta property="og:title" content={titleTemplate} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={image} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://w3idn.xyz${asPath}`} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@Web3IDN" />
-        <meta name="twitter:creator" content="@Web3IDN" />
-        <meta name="twitter:title" content={titleTemplate} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={image} />
-        <link rel="canonical" href={`https://w3idn.xyz${asPath}`} />
-        <title>{titleTemplate}</title>
-      </>
-    );
-  },
+  head: (
+    <>
+      <link rel="shortcut icon" href="/img/logo/logo.png" />
+    </>
+  ),
   logo: (
     <div className="flex flex-row items-center justify-center gap-2">
       <Image
@@ -64,6 +38,40 @@ const config: Partial<DocsThemeConfig> = {
   ),
   search: {
     placeholder: "Search",
+  },
+  useNextSeoProps() {
+    const { asPath, route } = useRouter();
+    const { frontMatter, title } = useConfig();
+
+    const image = frontMatter.image != null && {
+      alt: title,
+      url: frontMatter.image,
+    };
+
+    const description =
+      frontMatter.description ??
+      "Advancing blockchain education, research, resources and development Web3 Indonesia";
+
+    return {
+      canonical: `https://w3idn.xyz${asPath}`,
+      titleTemplate: route === "/" ? "%s" : "%s – Web3IDN",
+      twitter: {
+        handle: '@Web3IDN',
+        site: '@Web3IDN',
+        cardType: "summary_large_image",
+      },
+      description: description,
+      openGraph: {
+        description: description,
+        type: "website",
+        images: [
+          image || {
+            url: "/img/web3idn.png",
+            alt: "Web3IDN",
+          },
+        ],
+      },
+    };
   },
   docsRepositoryBase: "https://github.com/Web3ID/web3id/blob/master",
   navbar: {
