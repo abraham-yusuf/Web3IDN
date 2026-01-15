@@ -8,7 +8,6 @@ const redirectsFile = readFileSync("redirects.txt", "utf-8")
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
-  analyticsId: process.env.VERCEL_ANALYTICS_ID,
   redirects() {
     const redirects = redirectsFile.map((args) => {
       const [source, destination, permanent] = args.split(" ");
@@ -32,15 +31,10 @@ const nextConfig = {
   },
 };
 
-/** @type {import('nextra').NextraConfig} */
-const nextraConfig = {
+const withNextra = require("nextra").default({
   theme: "@components/layout",
   themeConfig: "./theme.config.tsx",
-  staticImage: true,
   defaultShowCopyCode: true,
-  readingTime: true,
-};
-
-const withNextra = require("nextra")(nextraConfig);
+});
 
 module.exports = withNextra(nextConfig);
