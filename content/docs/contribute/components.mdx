@@ -165,79 +165,25 @@ invest to learn
 
 ## Tab
 
-Mereka berasal dari kit eksternal `nextra/components`，tetapi Anda dapat menggunakannya dalam dokumen：
-
-```mdx
-import { Tabs } from "nextra/components";
-
-<Tabs items={['Open', 'Money']}>
-  <Tabs.Tab>
-
-In the history of mankind, we have always tried our best to understand Rust and conduct in-depth research on Rust. If we choose to ignore Rust at this time, the consequences can be imagined. Despite its seeming inconspicuousness, Rust has occupied my mind.
-
-  </Tabs.Tab>
-  <Tabs.Tab>
-
-I don't know programming
-
-  </Tabs.Tab>
-</Tabs>
-```
-
-<Tabs items={['Open', 'Money']}>
-  <Tabs.Tab>
-	
-	  In the history of mankind, we have always tried our best to understand Rust and conduct in-depth research on Rust. If we choose to ignore Rust at this time, the consequences can be imagined. Despite its seeming inconspicuousness, Rust has occupied my mind.
-
-  </Tabs.Tab>
-  <Tabs.Tab>
-
-I don't know programming
-
-  </Tabs.Tab>
-</Tabs>
+Tab components are available in Fumadocs. See [Fumadocs documentation](https://fumadocs.vercel.app/docs/ui/components/tabs) for usage.
 
 ## File List
 
 Tampilkan file dan folder, berguna untuk tutorial
 
-```mdx
-import { FileTree } from "nextra-theme-docs";
-
-<FileTree>
-  <FileTree.Folder name="file Anda" defaultOpen>
-    <FileTree.Folder name="frameworks" defaultOpen>
-      <FileTree.File name="react.mdx" />
-      <FileTree.File name="svelte.mdx" />
-      <FileTree.File name="vue.mdx" />
-    </FileTree.Folder>
-    <FileTree.Folder name="fruits" defaultOpen>
-      <FileTree.File name="apple.mdx" />
-      <FileTree.File name="banana.mdx" />
-    </FileTree.Folder>
-    <FileTree.File name="_meta.json" />
-    <FileTree.File name="about.mdx" />
-    <FileTree.File name="index.mdx" />
-  </FileTree.Folder>
-</FileTree>
 ```
-
-<FileTree>
-  <FileTree.Folder name="file anda" defaultOpen>
-    <FileTree.Folder name="frameworks" defaultOpen>
-      <FileTree.File name="react.mdx" />
-      <FileTree.File name="svelte.mdx" />
-      <FileTree.File name="vue.mdx" />
-    </FileTree.Folder>
-    <FileTree.Folder name="fruits" defaultOpen>
-      <FileTree.File name="apple.mdx" />
-      <FileTree.File name="banana.mdx" />
-    </FileTree.Folder>
-    <FileTree.File name="_meta.json" />
-    <FileTree.File name="about.mdx" />
-    <FileTree.File name="index.mdx" />
-  </FileTree.Folder>
-</FileTree>
+file Anda/
+├── frameworks/
+│   ├── react.mdx
+│   ├── svelte.mdx
+│   └── vue.mdx
+├── fruits/
+│   ├── apple.mdx
+│   └── banana.mdx
+├── _meta.json
+├── about.mdx
+└── index.mdx
+```
 
 <br />
 

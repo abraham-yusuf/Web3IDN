@@ -1,10 +1,10 @@
+'use client';
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { BsCaretUpFill } from "react-icons/bs";
 import { IoMdOpen } from "react-icons/io";
-import { ThemeSwitch } from "nextra-theme-docs";
 
 export type FooterCategory = {
   title: string;
@@ -31,7 +31,7 @@ export default function Footer({
         ))}
       </div>
       <div className="mt-10 flex flex-row flex-wrap justify-between gap-3">
-        <ThemeSwitch />
+        <div />
         <p className="text-secondary">
           Web3IDN © 28/07/2018 ~ {new Date(Date.now()).getFullYear()}
         </p>
