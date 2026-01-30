@@ -4,15 +4,6 @@ import {
   frontmatterSchema,
   metaSchema,
 } from 'fumadocs-mdx/config';
-import { z } from 'zod';
-
-// Extended frontmatter schema for blog posts
-const blogFrontmatterSchema = frontmatterSchema.extend({
-  date: z.string().optional(),
-  author: z.string().optional(),
-  tags: z.array(z.string()).optional(),
-  image: z.string().optional(),
-});
 
 // Docs configuration
 export const docs = defineDocs({
@@ -36,11 +27,11 @@ export const learn = defineDocs({
   },
 });
 
-// Blog configuration
+// Blog configuration - passthrough to allow additional fields
 export const blog = defineDocs({
   dir: 'content/blog',
   docs: {
-    schema: blogFrontmatterSchema,
+    schema: frontmatterSchema.passthrough(),
   },
   meta: {
     schema: metaSchema,

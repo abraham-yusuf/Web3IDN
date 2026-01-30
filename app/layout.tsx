@@ -1,4 +1,4 @@
-import { RootProvider } from 'fumadocs-ui/provider';
+import { RootProvider } from 'fumadocs-ui/provider/next';
 import type { ReactNode } from 'react';
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
@@ -24,12 +24,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className="flex flex-col min-h-screen">
-        <style jsx global>{`
-          html {
-            --font-noto: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-            font-family: var(--font-noto);
-          }
-        `}</style>
         <Script
           src="https://betteruptime.com/widgets/announcement.js"
           data-id="161215"
