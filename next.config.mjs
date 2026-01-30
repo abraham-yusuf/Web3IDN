@@ -7,7 +7,7 @@ const redirectsFile = readFileSync("redirects.txt", "utf-8")
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: false,
+  reactStrictMode: true,
   redirects() {
     const redirects = redirectsFile.map((args) => {
       const [source, destination, permanent] = args.split(" ");
