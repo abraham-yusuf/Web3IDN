@@ -15,7 +15,6 @@ import {
   LinkButton,
 } from "@components/mdx";
 import { BsDownload } from "react-icons/bs";
-import { motion } from "framer-motion";
 
 # komponen kustom
 
@@ -234,22 +233,6 @@ Ini memungkinkan Anda membuat animasi keren dengan mudah
 />
 ```
 
-<div className="mt-4 flex flex-col items-center rounded-2xl bg-purple-500 p-5">
-  <motion.div
-    animate={{
-      scale: [1, 2, 2, 1, 1],
-      rotate: [0, 0, 270, 270, 0],
-      borderRadius: ["20%", "20%", "50%", "50%", "20%"],
-    }}
-    transition={{
-      duration: 2,
-      ease: "easeInOut",
-      times: [0, 0.2, 0.5, 0.8, 1],
-      repeat: Infinity,
-      repeatDelay: 0.2,
-    }}
-    className="m-[5rem] h-10 w-10 bg-white md:h-32 md:w-32"
-  />
-</div>
+{/* Framer Motion animation demo removed for now - see https://www.framer.com/docs/ for examples */}
 
 Sebaiknya Anda memahaminya untuk menciptakan pengalaman yang lebih baik bagi pengguna.
