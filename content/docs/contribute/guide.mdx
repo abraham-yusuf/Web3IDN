@@ -16,26 +16,22 @@ Semua file mdx terletak di folder `/pages`
 
 | Dokumentasi          | Blog        | Learn         |
 | ------------- | ------------- | ------------- |
-| `/pages/docs` | `/pages/blog` | `/pages/lean` |
+| `/content/docs` | `/content/blog` | `/content/learn` |
 
 ### Pembaruan metode impor gambar
 
-Versi sebelumnya memungkinkan Anda mengimpor gambar dari folder `/static` misalnya:
+Semua gambar harus ditempatkan di folder `/public` dan direferensikan langsung:
 
 ```mdx
 ![Foto ku](/my-photo.png)
 ```
 
-Sekarang Anda harus meletakkan gambar Anda di folder `/public` dan mengimpornya menggunakan `![alt](@static/my-photo.png)`.
+Untuk gambar dalam subdirektori, gunakan path lengkap dari folder public:
 
 ```mdx
-# Sebelum
-
 ![alt](/docs/my-photo.png)
-
-# Sekarang
-
-![alt](@static/docs/my-photo.png)
+![alt](/blog/my-photo.png)
+![alt](/learn/my-photo.png)
 ```
 
 </div>
@@ -156,7 +152,7 @@ Saya yakin Anda telah mempelajari beberapa sintaks Markdown dasar
 
 ### Mengurutkan halaman
 
-Anda harus mengedit `_meta.json` untuk mengubah urutan setiap halaman：
+Anda harus mengedit `meta.json` untuk mengubah urutan setiap halaman:
 
 ```json
 {
