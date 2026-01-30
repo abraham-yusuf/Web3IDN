@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es2015",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -15,16 +19,47 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@schema/*": ["./src/schema/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@blog/*": ["./src/blog/*"],
-      "@home/*": ["./src/home/*"],
-      "@learn/*": ["./src/learn/*"],
-      "@components/*": ["./src/components/*"],
-      "@static/*": ["./public/*"],
-      "@app": ["./src/_app"]
-    }
+      "@/*": [
+        "./*"
+      ],
+      "@schema/*": [
+        "./src/schema/*"
+      ],
+      "@utils/*": [
+        "./src/utils/*"
+      ],
+      "@blog/*": [
+        "./src/blog/*"
+      ],
+      "@home/*": [
+        "./src/home/*"
+      ],
+      "@learn/*": [
+        "./src/learn/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@static/*": [
+        "./public/*"
+      ],
+      "@app": [
+        "./src/_app"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

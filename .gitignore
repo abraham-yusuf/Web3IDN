@@ -37,6 +37,9 @@ next-env.d.ts
 .idea
 .vscode
 
+# fumadocs
+.source
+
 package-lock.json
 # if using yarn v3
 .yarn
