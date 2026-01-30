@@ -1,4 +1,4 @@
-import { blogSource } from '@/lib/source';
+import { blogSource } from '@/src/lib/source';
 import {
   DocsBody,
   DocsDescription,

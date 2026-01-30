@@ -1,7 +1,7 @@
-import { blogSource } from '@/lib/source';
+import { blogSource } from '@/src/lib/source';
 import { DocsLayout } from 'fumadocs-ui/layouts/docs';
 import type { ReactNode } from 'react';
-import { baseOptions } from '@/lib/layout.shared';
+import { baseOptions } from '@/src/lib/layout.shared';
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (

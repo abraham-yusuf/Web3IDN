@@ -1,4 +1,4 @@
-import { learnSource } from '@/lib/source';
+import { learnSource } from '@/src/lib/source';
 import {
   DocsBody,
   DocsDescription,
