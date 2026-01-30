@@ -1,6 +1,18 @@
 import { FooterCategory } from "@components/Footer";
-import type { AuthorData } from "@schema/blog";
-import type { AuthorLearnData } from "@schema/learn";
+
+export type AuthorData = {
+  name: string;
+  title: string;
+  url?: string;
+  image_url?: string;
+};
+
+export type AuthorLearnData = {
+  name: string;
+  title: string;
+  url?: string;
+  image_url?: string;
+};
 
 export const isProduction = process.env.NODE_ENV === "production";
 export const API_ENDPOINT = isProduction

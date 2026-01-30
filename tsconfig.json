@@ -22,29 +22,17 @@
       "@/*": [
         "./*"
       ],
-      "@schema/*": [
-        "./src/schema/*"
-      ],
       "@utils/*": [
         "./src/utils/*"
       ],
-      "@blog/*": [
-        "./src/blog/*"
-      ],
       "@home/*": [
         "./src/home/*"
-      ],
-      "@learn/*": [
-        "./src/learn/*"
       ],
       "@components/*": [
         "./src/components/*"
       ],
       "@static/*": [
         "./public/*"
-      ],
-      "@app": [
-        "./src/_app"
       ]
     },
     "plugins": [
