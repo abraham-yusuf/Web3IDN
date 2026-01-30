@@ -7,7 +7,8 @@
     "build": "next build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "fumadocs-mdx"
   },
   "dependencies": {
     "@next/env": "^15.5.9",
@@ -15,11 +16,13 @@
     "@vercel/edge-config": "^0.1.1",
     "clsx": "^1.2.1",
     "framer-motion": "^12.26.2",
+    "fumadocs-core": "^16.4.11",
+    "fumadocs-mdx": "^14.2.6",
+    "fumadocs-ui": "^16.4.11",
     "iron-session": "^6.3.1",
+    "lucide-react": "^0.468.0",
     "next": "15.5.9",
     "next-seo": "^6.0.0",
-    "nextra": "3.3.1",
-    "nextra-theme-docs": "3.3.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-icons": "^4.8.0",
@@ -30,6 +33,7 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@types/mdx": "^2.0.13",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",

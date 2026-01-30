@@ -1,9 +1,12 @@
 const { readFileSync } = require("fs");
+const { createMDX } = require("fumadocs-mdx/next");
 
 const redirectsFile = readFileSync("redirects.txt", "utf-8")
   .toString()
   .trim()
   .split("\n");
+
+const withMDX = createMDX();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -31,10 +34,4 @@ const nextConfig = {
   },
 };
 
-const withNextra = require("nextra").default({
-  theme: "@components/layout",
-  themeConfig: "./theme.config.tsx",
-  defaultShowCopyCode: true,
-});
-
-module.exports = withNextra(nextConfig);
+module.exports = withMDX(nextConfig);

@@ -15,6 +15,7 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
+      "@/*": ["./*"],
       "@schema/*": ["./src/schema/*"],
       "@utils/*": ["./src/utils/*"],
       "@blog/*": ["./src/blog/*"],
